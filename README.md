@@ -17,8 +17,13 @@ Add the Service Provider and Facade alias to your config/app.php
 CamboDev\LaravelTelegramApi\TelegramServiceProvider::class,
 'TelegramPush' => CamboDev\LaravelTelegramApi\TelegramFacade::class,
 ```
+## .env
+TELEGRAM_API_KEY=**************************************
+
 ## Using
 Use the Facade
+
+
 ##### Test Connection
 ```php
     $chat_id = '-956xxxxxx';
