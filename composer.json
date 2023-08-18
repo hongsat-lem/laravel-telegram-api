@@ -1,0 +1,39 @@
+{
+    "name": "cambodev/laravel-telegram-api",
+    "description": "Connect web app with telegram api to push notification. laravel with telegram api",
+    "keywords": ["laravel with telegram api", "telegram", "notification", "laravel"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hongsat LEM",
+            "email": "hongsat993@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "CamboDev\\LaravelTelegramApi\\": "src/"
+        }
+    },
+
+    "extra": {
+        "component": "package",
+        "frameworks": ["Laravel"],
+        "branch-alias": {
+            "dev-master": "v1.0.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "CamboDev\\LaravelTelegramApi\\TelegramServiceProvider"
+            ],
+            "aliases": {
+                "TelegramPush": "CamboDev\\LaravelTelegramApi\\TelegramFacade"
+            }
+        }
+    }
+}
