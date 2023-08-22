@@ -45,7 +45,7 @@ Use the Facade
 ```
 ##### Send Media Group
 ```php
-    $chat_id = '-956052338';
+    $chat_id = '-956xxxxxx
     $photo = [
             'https://img.freepik.com/premium-vector/website-developer-graphic-designer-work-with-laptop-desk-table_197170-153.jpg',
             'https://img.freepik.com/free-vector/person-talking-online-with-friend_23-2148490053.jpg',
