@@ -1,4 +1,4 @@
-# kh-date-converter
+# laravel-telegram-api
 Laravel PHP package use to sent telegram notification intergated with laravel. Sent text photo, photo group
 
 ## Installation
