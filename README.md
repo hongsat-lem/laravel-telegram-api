@@ -23,17 +23,27 @@ TELEGRAM_API_KEY=**************************************
 ## Using
 Use the Facade
 
+use TelegramPush;
 
 ##### Test Connection
 ```php
     $chat_id = '-956xxxxxx';
     $push = TelegramPush::testConnection($chat_id);
 ```
-##### Send Text
+##### Send Text No Redirect Button
 ```php
     $chat_id = '-956xxxxxx';
     $text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nuncsem vitae risus tristique posuere.';
-    $push = TelegramPush::sendText($text, $chat_id);
+
+$push = TelegramPush::sendText($text, $chat_id);
+```
+##### Send Text with Redirect Button
+```php
+    $chat_id = '-956xxxxxx';
+    $text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nuncsem vitae risus tristique posuere.';
+    $link = 'your_app_url';
+
+$push = TelegramPush::sendText($text, $chat_id, $link);
 ```
 ##### Send Single Photo
 ```php
