@@ -26,7 +26,7 @@ class Telegram
         return $telegram->sendMessage($message2, $sound, $this->link);
     }
 
-    public function sendText($text, $chart_id)
+    public function sendText($text, $chart_id, $redirect = null)
     {
         $telegram = new TelegramUtility($chart_id, $this->api_key);
         $message2 = '';
@@ -34,7 +34,7 @@ class Telegram
 
         $sound = 'normal';
 
-        return $telegram->sendMessage($message2, $sound, $this->link);
+        return $telegram->sendMessage($message2, $sound, $redirect);
     }
 
     public function testConnection($telegram_username)
@@ -46,7 +46,7 @@ class Telegram
 
         $sound = 'normal';
 
-        return $telegram->sendMessage($message2, $sound,$this->link);
+        return $telegram->sendMessage($message2, $sound);
     }
 
     public function sentMedia($text, $photo, $chart_id, $join = null)

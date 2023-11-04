@@ -105,7 +105,7 @@ class TelegramUtility
         return $req;
     }
 
-    public function sendMessage($message, $sound, $redirect)
+    public function sendMessage($message, $sound, $redirect = null)
     {
         $url = "https://api.telegram.org/bot".$this->api_key."/";
 
@@ -123,10 +123,12 @@ class TelegramUtility
         (
             'chat_id' => $this->chat_id,
             'text' => $message,
-            'reply_markup' => $encodedKeyboard,
             'parse_mode' => 'HTML'
 
         );
+        if ($redirect){
+            $params['reply_markup'] = $encodedKeyboard;
+        }
         if ($sound == 's')
         {
             $params['disable_notification'] = TRUE;
